@@ -1,0 +1,40 @@
+nav.menu {
+    width: 100%;
+}
+
+nav.menu > ul {
+    letter-spacing: -.4em;
+}
+
+nav.menu > ul > li {
+    display: inline-block;
+    width: 20%;
+    margin: 0 auto;
+    letter-spacing: normal;
+}
+
+.menu__link {
+    text-align: center;
+}
+
+.menu__link-text {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.menu__link-text::after {
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    left: -4px;
+    bottom: 0;
+    transition: .5s all;
+    background-color: #3CE7F3;
+    content: '';
+}
+
+.menu__link-text:hover::after {
+    width: calc(100% + 8px);
+}
