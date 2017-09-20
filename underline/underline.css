@@ -17,6 +17,7 @@ nav.menu > ul > li {
     text-align: center;
 }
 
+/* Animation under line*/
 .menu__link-text {
     display: inline-block;
     position: relative;
@@ -28,13 +29,30 @@ nav.menu > ul > li {
     position: absolute;
     width: 0px;
     height: 4px;
-    left: -4px;
     bottom: 0;
-    transition: .5s all;
+    transition: .3s all;
     background-color: #3CE7F3;
     content: '';
 }
 
 .menu__link-text:hover::after {
+    width: calc(100% + 8px);
+}
+
+.to-right::after {
+    left: -4px;
+}
+
+.to-left::after {
+    right: -4px;
+}
+
+.to-center::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu__link-text--active::after {
+    left: -4px;
     width: calc(100% + 8px);
 }
